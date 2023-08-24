@@ -45,4 +45,41 @@ cd crm/
 python manage.py runserver
 ```
 
+##  Creación de la carpeta para la vista
+```sh
+python manage.py startapp website
+```
+
+##  Configuraciones del archivo settings.py (en la raíz)
+`
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "website",
+]
+`
+
+`
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "crm_django_mysql",
+        "USER": "root",
+        "PASSWORD": "",
+        "HOST": "localhost",
+        "PORT": "3306",
+    }
+}
+`
+
+#   Creación de la App
+```sh
+touch mydb.py
+```
+
+
 
